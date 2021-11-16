@@ -1,0 +1,181 @@
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 71%;
+  margin: auto;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500%;
+  height: 795px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slide {
+  width: 20%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../../img/coach-courosel-1.png);
+}
+
+.slide__bg {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 64%;
+  -webkit-transform: skewX(7deg);
+          transform: skewX(7deg);
+  position: absolute;
+  height: 100%;
+  left: -10%;
+  padding-left: 20rem;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.slide__bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: inherit;
+  pointer-events: none;
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+}
+
+.slide__details {
+  width: 100%;
+  padding: 5rem;
+  padding-left: 10rem;
+  z-index: 100;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+
+.slide__title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.slide__description {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #e4e4e4;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+}
+
+.slide__more-info-btn {
+  padding: 1rem 3rem;
+  color: #fff;
+  background: linear-gradient(75.62deg, #009ee2 7.02%, #273992 91.67%);
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.slide__more-info-btn:hover, .slide__more-info-btn:focus {
+  background: #fff;
+  color: #273992;
+}
+
+.slide__more-info-btn:focus {
+  outline: none;
+}
+
+.prev-btn,
+.next-btn,
+.trail {
+  position: absolute;
+  z-index: 1000;
+}
+
+.prev-btn,
+.next-btn {
+  width: 4rem;
+  cursor: pointer;
+  fill: #009ee2;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 0%;
+}
+
+.next-btn {
+  right: 0%;
+}
+
+.trail {
+  bottom: 0%;
+  left: 16%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 4%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.trail__item {
+  width: 75%;
+  padding: 2rem;
+  border-top: 3px solid #009ee2;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+
+.trail__item:hover {
+  opacity: .6;
+}
+
+.active {
+  border-top: 3px solid #fff;
+}
+/*# sourceMappingURL=slider.css.map */

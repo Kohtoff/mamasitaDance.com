@@ -1,0 +1,177 @@
+.navbar {
+  max-height: 90px;
+}
+
+.navbar-brand {
+  display: flex;
+  position: relative;
+  bottom: -14px;
+  left: 29px;
+
+  &--header {
+    @media screen and (max-width: $medium) {
+      position: static;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &--footer {
+    position: static;
+    @media screen and (max-width: $medium) {
+      position: static;
+      font-size: 3vw;
+    }
+  }
+}
+
+.main-logo {
+  @media screen and (max-width: $medium) {
+    display: none;
+    &--footer {
+      display: none;
+    }
+  }
+}
+
+.navbar-toggler {
+  position: relative;
+  top: -45px;
+}
+
+.navbar-mask {
+  position: absolute;
+  z-index: -1;
+  bottom: -52px;
+
+  @media screen and (max-width: 560px) {
+    width: 100%;
+    bottom: -42px;
+  }
+}
+
+.brand-title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Warnes-Regular" !important;
+  text-transform: uppercase;
+  font-size: 2.4vw !important;
+  color: #073773 !important;
+
+  @media screen and (max-width: $medium) {
+    font-size: 3vw !important;
+  }
+  @media screen and (max-width: $small) {
+    font-size: 6vw !important;
+  }
+  @media screen and (max-width: $extraSmall) {
+    margin: auto;
+  }
+
+  &__subtext {
+    font-size: 0.9vw;
+    display: inline-block;
+    @media screen and (max-width: $large) {
+      font-size: 2vw;
+    }
+
+    &--footer {
+      @media screen and (max-width: $medium) {
+        font-size: 2vw;
+      }
+    }
+  }
+
+  &--footer {
+    color: #fff !important;
+    @media screen and (max-width: $medium) {
+      font-size: 5vw !important;
+    }
+  }
+}
+
+.navbar-nav {
+  gap: 20px;
+
+  &--header {
+    @media screen and (max-width: $medium) {
+      background-color: #fff;
+      gap: 0;
+    }
+  }
+  &--footer {
+    gap: 100px;
+    margin-top: 30px;
+    flex-direction: row !important;
+
+    @media screen and (max-width: $large) {
+      margin-top: 0;
+      gap: 10%;
+      justify-content: center;
+    }
+  }
+}
+.nav-link {
+  font-family: "Raleway";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
+  &--header {
+    @media screen and (max-width: $medium) {
+      border-bottom: 1px solid black;
+      text-align: center;
+      &:hover {
+        color: #fff;
+        .nav-item {
+          background-color: blue;
+        }
+      }
+    }
+  }
+  &--footer {
+    font-size: 2vw !important;
+    color: #fff !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav-link.active {
+  color: #009ee2 !important;
+}
+
+.link-box {
+  display: flex;
+  width: 20%;
+  gap: 15px;
+  @media screen and (max-width: $medium) {
+    display: none;
+  }
+  &__logo {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &__item:hover {
+    .link-box__logo {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.banner-img {
+  width: 100%;
+  position: relative;
+  z-index: -6;
+}
+
+.banner-mask {
+  position: relative;
+  bottom: 11vw;
+  left: 0;
+}

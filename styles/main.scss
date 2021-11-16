@@ -1,0 +1,264 @@
+@import "./vars.scss";
+@import "./reset.scss";
+
+@import "./components/header/header.scss";
+@import "./components/slider/slider.scss";
+@import "./components/footer/footer.scss";
+@import "./components/teacher-cards/teacher-cards.scss";
+
+body {
+  background-image: url(./img/bg_effects.png);
+  background-attachment: fixed;
+}
+
+.container-fluid {
+  position: relative;
+  z-index: 1;
+  @media screen and (max-width: $medium) {
+    display: block !important;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 20vw;
+  height: 20vw;
+
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  position: relative;
+  bottom: 0;
+  left: 17rem;
+
+  text-align: center;
+
+  &__title {
+    font-family: "SchoolBell", cursive;
+    font-size: 2.8vw;
+    color: #073773;
+  }
+  &__description {
+    max-width: 270px;
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: 1.1vw;
+  }
+  &__start-btn {
+    width: 60%;
+    height: 60px;
+
+    background-image: linear-gradient(#009ee2, #273992);
+    border-radius: 25px;
+
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background-image: linear-gradient(#273992, #273992);
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.3s;
+    }
+  }
+  &__svg-stroke {
+    position: absolute;
+    z-index: -2;
+    width: 20vw;
+    height: 20vw;
+  }
+}
+.section-form {
+  position: absolute;
+  top: 38vw;
+  left: -5vw;
+
+  @media screen and (max-width: $small) {
+    top: 41vw;
+    left: -11vw;
+  }
+  @media screen and (max-width: $small) {
+    position: static;
+  }
+}
+
+.form {
+  @media screen and (max-width: $small) {
+    width: 100%;
+    border-radius: 0;
+    position: static;
+    background-color: transparent;
+
+    &__title {
+      font-size: 5vw;
+    }
+    &__description {
+      font-size: 2vw;
+    }
+    &__start-btn {
+      width: 40%;
+    }
+  }
+}
+
+.position-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.position-0 {
+  z-index: 0;
+}
+
+.page-title {
+  color: 073773;
+  font-size: 12vw;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 60px;
+  color: #073773;
+}
+
+.main-wrapper {
+  padding-top: 30px;
+  padding-right: 205px;
+  padding-left: 205px;
+  @media screen and (max-width: $large) {
+    padding-right: 1vw;
+    padding-left: 1vw;
+  }
+  @media screen and (max-width: $medium) {
+    display: block !important;
+  }
+  position: relative;
+  width: 100%;
+}
+
+// bootstrap classes
+@media screen and (max-width: $medium) {
+  .col-4,
+  .row-cols-2 > * {
+    width: 100% !important;
+  }
+}
+
+.page-description {
+  max-width: 430px;
+  font-size: 18px;
+
+  &--coaches,
+  &--about-us {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 5vw;
+
+    @media screen and (max-width: $small) {
+      font-size: 3.5vw;
+    }
+  }
+
+  &--about-us{
+    text-align: center;
+  }
+
+
+  @media screen and (max-width: $medium) {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.show-more-btn-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.show-more-btn {
+  height: 107px;
+  width: 290px;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  left: 0px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+
+  &:hover {
+    background: linear-gradient(
+      to left,
+      rgba($color: #fff, $alpha: 1),
+      rgba($color: #000000, $alpha: 0)
+    );
+    box-shadow: -3px 6px 10px -5px;
+  }
+
+  @media screen and (max-width: $medium) {
+    position: static;
+    justify-self: center;
+    margin: auto auto 20px auto;
+    border-radius: 25px;
+  }
+}
+
+.show-more-svg {
+  @media screen and (max-width: $medium) {
+    display: none;
+  }
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  min-height: 450px;
+  justify-content: space-around;
+
+  @media screen and (max-width: $large) {
+    gap: 1vw;
+    flex-wrap: wrap;
+  }
+}
+.card {
+  border-radius: 15px !important;
+  max-height: 12rem;
+  @media screen and (min-width: $large) {
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+  }
+  @media screen and (max-width: $large) {
+    max-height: 14rem;
+  }
+  &-text {
+    margin-bottom: 15px !important;
+    font-weight: 900;
+    font-size: 14px !important;
+  }
+}
+
+.row {
+  @media screen and (max-width: $small) {
+    display: block;
+  }
+}
+
+.footer {
+  background-image: url(./img/BG.png);
+}
+
+.slide {
+  background-image: url(./img/coach-courosel-1.png);
+}
+
+
+

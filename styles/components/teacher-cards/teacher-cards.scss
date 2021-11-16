@@ -1,0 +1,79 @@
+.teachers {
+  margin: 5vw 16vw;
+  &__title {
+    font-size: 10vw;
+    font-weight: bold;
+    color: #073773;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $small) {
+    margin: 5vw 12vw;
+  }
+}
+
+.teacher-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.teacher-card {
+  display: flex;
+  width: 33vw;
+
+  @media screen and (max-width: 1110px) {
+    min-width: 33vw;
+    width: auto;
+  }
+
+  @media screen and (max-width: $small) {
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 2vw;
+  }
+
+  &__photo {
+    margin-right: 1vw;
+
+    @media screen and (max-width: $small) {
+      margin: auto;
+    }
+  }
+
+  &__info {
+    padding: 1vw 0.5vw;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 7px -4px;
+
+    @media screen and (max-width: $small) {
+      text-align: center;
+    }
+  }
+
+  &__fullname {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #073773;
+
+    @media screen and (max-width: 1110px) {
+      font-size: 4vw;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 6vw;
+    }
+  }
+
+  &__personal-info {
+    font-size: 0.8vw;
+
+    @media screen and (max-width: 1110px) {
+      font-size: 1.8vw;
+    }
+    @media screen and (max-width: $small) {
+      font-size: 2.8vw;
+    }
+  }
+}

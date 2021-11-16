@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Imported Fonts-->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&family=Schoolbell&display=swap");
+    </style>
+    <title>MamasitaDance</title>
+  </head>
+
+  <body>
+    <header></header>
+    <main class="main">
+      <div class="slider-container">
+        <div class="slider">
+          <div id="" class="slide first-slide">
+            <div class="slide__bg"></div>
+            <div class="slide__details">
+              <h3 class="slide__title">Title1</h3>
+              <p class="slide__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto eos nam hic!
+              </p>
+              <button class="slide__more-info-btn">Show more</button>
+            </div>
+            <div class="slide__illustration">
+              <div class="slide__inner"></div>
+            </div>
+          </div>
+
+          <div class="slide second-slide">
+            <div class="slide__bg"></div>
+            <div class="slide__details">
+              <h3 class="slide__title">Title2</h3>
+              <p class="slide__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto eos nam hic!
+              </p>
+              <button class="slide__more-info-btn">Show more</button>
+            </div>
+            <div class="slide__illustration">
+              <div class="slide__inner"></div>
+            </div>
+          </div>
+
+          <div class="slide third-slide">
+            <div class="slide__bg"></div>
+            <div class="slide__details">
+              <h3 class="slide__title">Title3</h3>
+              <p class="slide__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto eos nam hic!
+              </p>
+              <button class="slide__more-info-btn">Show more</button>
+            </div>
+            <div class="slide__illustration">
+              <div class="slide__inner"></div>
+            </div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="prev-btn"
+          id="slider-btn prev-btn"
+          width="56.898"
+          height="91"
+          viewBox="0 0 56.898 91"
+        >
+          <path
+            d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
+            transform="translate(0 91) rotate(-90)"
+            fill="#009EE2"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="slider-btn next-btn"
+          id="next-btn"
+          width="56.898"
+          height="91"
+          viewBox="0 0 56.898 91"
+        >
+          <path
+            d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
+            transform="translate(56.898) rotate(90)"
+            fill="#009EE2"
+          />
+        </svg>
+        <div class="trail">
+          <div class="trail__item">1</div>
+          <div class="trail__item">2</div>
+          <div class="trail__item">3</div>
+        </div>
+      </div>
+      <p class="page-description page-description--coaches">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+        beatae vitae dicta sunt explicabo.
+        <br />
+        <br />
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+        sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit
+        voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+        dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+        non numquam eius modi tempora incidunt ut labore et dolore magnam
+        aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+        commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+        voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+        dolorem eum fugiat quo voluptas nulla pariatur?
+      </p>
+    </main>
+    <footer class="footer"></footer>
+
+    <!--custom scripts-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="./template.js" type="text/javascript"></script>
+    <script defer>
+      insertHeaderTemplate("./styles/img/banner-coaches.png");
+      insertFooterTemplate();
+      insertTeacherCards(3);
+    </script>
+    <script src="./slider.js"></script>
+  </body>
+</html>
