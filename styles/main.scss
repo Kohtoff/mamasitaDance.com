@@ -5,6 +5,7 @@
 @import "./components/slider/slider.scss";
 @import "./components/footer/footer.scss";
 @import "./components/teacher-cards/teacher-cards.scss";
+@import "./components/carousel/carousel.scss";
 
 body {
   background-image: url(./img/bg_effects.png);
@@ -18,7 +19,14 @@ body {
     display: block !important;
   }
 }
+.main {
+  margin-top: 2vw;
 
+  &--about-us {
+    max-width: 1450px;
+    margin: auto;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -84,6 +92,7 @@ body {
     left: -11vw;
   }
   @media screen and (max-width: $small) {
+    margin-top: 20px;
     position: static;
   }
 }
@@ -156,17 +165,17 @@ body {
   &--about-us {
     max-width: 80%;
     margin: auto;
-    margin-top: 5vw;
 
     @media screen and (max-width: $small) {
       font-size: 3.5vw;
     }
   }
-
-  &--about-us{
+  &--coaches {
+    margin-top: 5vw;
+  }
+  &--about-us {
     text-align: center;
   }
-
 
   @media screen and (max-width: $medium) {
     max-width: 100%;
@@ -200,7 +209,15 @@ body {
       rgba($color: #fff, $alpha: 1),
       rgba($color: #000000, $alpha: 0)
     );
+    transform: scale(1);
     box-shadow: -3px 6px 10px -5px;
+  }
+
+  &--small {
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    align-self: flex-end;
   }
 
   @media screen and (max-width: $medium) {
@@ -208,12 +225,19 @@ body {
     justify-self: center;
     margin: auto auto 20px auto;
     border-radius: 25px;
+    &--small{
+      margin: 0;
+      position: absolute;
+    }
   }
 }
 
 .show-more-svg {
   @media screen and (max-width: $medium) {
     display: none;
+    &--small{
+      display: block;
+    }
   }
 }
 
@@ -260,5 +284,60 @@ body {
   background-image: url(./img/coach-courosel-1.png);
 }
 
+.info-articles {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8vw;
+}
+
+.article {
+  display: flex;
+  min-height: 385px;
+  max-width: 38vw;
+
+  @media screen and (max-width: $large) {
+    max-width: 48vw;
+    gap: 2%;
+    align-self: center;
+  }
+  
+  @media screen and (max-width: $medium) {
+    max-width: 100%;
+    margin: 20px 3%; 
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $medium) {
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+  }
 
 
+  &__img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 111vw;
+    @media screen and (max-width: $medium) {
+      width: auto;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__svg-stroke {
+    position: absolute;
+    z-index: -1;
+  }
+  &__content {
+    @media screen and (min-width: $medium) {
+      margin-left: 7vw;
+    }
+  }
+}
+
+.awards__title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 62px;
+}

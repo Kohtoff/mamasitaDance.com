@@ -58,6 +58,7 @@ document.querySelectorAll(".slider-btn").forEach(cur => {
 const clickCheck = (e) => {
     clearInterval(start)
     trail.forEach(cur => cur.classList.remove("active"))
+    console.log(trail);
     const check = e.target
     check.classList.add("active")
 
@@ -100,24 +101,6 @@ const touchSlide = (() => {
 
 
 
-// const $slider = document.querySelector('.slider');
-// const $trailBoxes = document.querySelectorAll('.trail__items');
-// const $prevBtn = document.querySelector('#prev-btn');
-// const $nextBtn = document.querySelector('#next-btn');
-// let currentSlide = null;
 
-// function showNext() {
-//     $trailBoxes.forEach(item => item.classList.remove("active"));
-// }
-
-// function showNext(current){
-
-// }
-
-// $slider.addEventListener('mouseover', function(event, slick, currentEl){
-//     console.log("Look what i have:", currentEl);
-//     this.currentSlide = currentEl;
-//     console.log('That i put on current var:', this.currentSlide);
-// })
 
 

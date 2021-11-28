@@ -1,3 +1,6 @@
+header{
+  position: relative;
+}
 .navbar {
   max-height: 90px;
 }
@@ -134,6 +137,9 @@
   &--footer {
     font-size: 2vw !important;
     color: #fff !important;
+    @media screen and (max-width: $medium) {
+      font-size: 3vw !important;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -170,6 +176,9 @@
   z-index: -6;
 }
 
+.mask-wrapper{
+  position: absolute;
+}
 .banner-mask {
   position: relative;
   bottom: 11vw;

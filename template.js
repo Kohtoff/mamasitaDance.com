@@ -142,6 +142,7 @@ function insertHeaderTemplate(bannerPath) {
       src="${bannerPath}"
       alt="banner"
     />
+    <div class="mask-wrapper">
     <svg
       class="banner-mask img-fluid"
       width="1920"
@@ -171,7 +172,8 @@ function insertHeaderTemplate(bannerPath) {
           <stop offset="1" stop-color="#273992" />
         </linearGradient>
       </defs>
-    </svg>`;
+    </svg>
+    </div>`;
   return ($header.innerHTML = template);
 }
 

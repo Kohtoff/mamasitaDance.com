@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+header {
+  position: relative;
+}
+
 .navbar {
   max-height: 90px;
 }
@@ -214,6 +218,12 @@ a {
   color: #fff !important;
 }
 
+@media screen and (max-width: 995px) {
+  .nav-link--footer {
+    font-size: 3vw !important;
+  }
+}
+
 .nav-link--footer:hover {
   text-decoration: underline;
 }
@@ -252,6 +262,10 @@ a {
   width: 100%;
   position: relative;
   z-index: -6;
+}
+
+.mask-wrapper {
+  position: absolute;
 }
 
 .banner-mask {
@@ -679,6 +693,121 @@ a {
   }
 }
 
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+}
+
+.carousel-container {
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 2em;
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 650px;
+  --card-height: 385px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
+}
+
+.card-carousel.smooth-return {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card-item {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 995px) {
+  .card-carousel .card-item {
+    width: 40%;
+  }
+}
+
+.card-item.highlight {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.card-item .image-container {
+  background-image: url(./img/award.png);
+}
+
+.image-container {
+  width: 21rem;
+  height: 14rem;
+  border-radius: 25px;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 995px) {
+  .image-container {
+    width: 16rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .image-container {
+    width: 12rem;
+    height: 8rem;
+  }
+}
+
 body {
   background-image: url(./img/bg_effects.png);
   background-attachment: fixed;
@@ -693,6 +822,15 @@ body {
   .container-fluid {
     display: block !important;
   }
+}
+
+.main {
+  margin-top: 2vw;
+}
+
+.main--about-us {
+  max-width: 1450px;
+  margin: auto;
 }
 
 .form {
@@ -775,6 +913,7 @@ body {
 
 @media screen and (max-width: 720px) {
   .section-form {
+    margin-top: 20px;
     position: static;
   }
 }
@@ -851,13 +990,16 @@ body {
 .page-description--coaches, .page-description--about-us {
   max-width: 80%;
   margin: auto;
-  margin-top: 5vw;
 }
 
 @media screen and (max-width: 720px) {
   .page-description--coaches, .page-description--about-us {
     font-size: 3.5vw;
   }
+}
+
+.page-description--coaches {
+  margin-top: 5vw;
 }
 
 .page-description--about-us {
@@ -901,8 +1043,18 @@ body {
 .show-more-btn:hover {
   background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to left, white, rgba(0, 0, 0, 0));
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-box-shadow: -3px 6px 10px -5px;
           box-shadow: -3px 6px 10px -5px;
+}
+
+.show-more-btn--small {
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 @media screen and (max-width: 995px) {
@@ -913,11 +1065,18 @@ body {
     margin: auto auto 20px auto;
     border-radius: 25px;
   }
+  .show-more-btn--small {
+    margin: 0;
+    position: absolute;
+  }
 }
 
 @media screen and (max-width: 995px) {
   .show-more-svg {
     display: none;
+  }
+  .show-more-svg--small {
+    display: block;
   }
 }
 
@@ -975,5 +1134,87 @@ body {
 
 .slide {
   background-image: url(./img/coach-courosel-1.png);
+}
+
+.info-articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 8vw;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 385px;
+  max-width: 38vw;
+}
+
+@media screen and (max-width: 1290px) {
+  .article {
+    max-width: 48vw;
+    gap: 2%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .article {
+    max-width: 100%;
+    margin: 20px 3%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 995px) {
+  .article:nth-child(even) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.article__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 111vw;
+}
+
+@media screen and (max-width: 995px) {
+  .article__img {
+    width: auto;
+    margin-bottom: 55px;
+  }
+}
+
+.article__svg-stroke {
+  position: absolute;
+  z-index: -1;
+}
+
+@media screen and (min-width: 995px) {
+  .article__content {
+    margin-left: 7vw;
+  }
+}
+
+.awards__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 62px;
 }
 /*# sourceMappingURL=main.css.map */
