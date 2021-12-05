@@ -1,5 +1,5 @@
 function setActiveNavBtn () {
-  let currentPage = document.location.pathname.split('/')[7];
+  let currentPage = document.location.pathname.split('/').reverse()[0];
   let links = [...document.body.querySelectorAll('.nav-link')]  ;
   console.log(links);
   let currBtn;
