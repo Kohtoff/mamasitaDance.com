@@ -1,3 +1,32 @@
+function setActiveNavBtn () {
+  let currentPage = document.location.pathname.split('/')[7];
+  let links = [...document.body.querySelectorAll('.nav-link')]  ;
+  console.log(links);
+  let currBtn;
+  links.forEach(item => {
+    item.classList.remove('active')
+  })
+
+  switch(currentPage){
+    case "coaches.html":
+      currBtn = links.filter(item => item.innerText === 'COACHES');
+      currBtn.forEach(item => {
+        console.log(item);
+        item.classList.add('active')});
+      break;
+
+    case "index.html":
+      currBtn = links.filter(item => item.innerText === 'HOME');
+      currBtn.forEach(item => item.classList.add('active'));
+      break;
+
+    case "about-us.html":
+      currBtn = links.filter(item => item.innerText === 'ABOUT US');
+      currBtn.forEach(item => item.classList.add('active'));
+      break;
+
+  }
+}
 function insertHeaderTemplate(bannerPath) {
   let $header = document.querySelector("header");
   let template = `
@@ -357,8 +386,6 @@ function insertModalForm() {
   </form>
 </div>
 </div>`;
-  // const scriptLink = '<script src="./showModalForm.js"></script>';
 
   document.body.innerHTML += template;
-  // document.body.parentElement.innerHTML += scriptLink;
 }
