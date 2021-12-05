@@ -290,8 +290,8 @@ function insertTeacherCards(numberOfCards) {
     <h2 class="teachers__title">Teachers</h2>
     <div class="teacher-cards">
     </div>
-    </section>`
-  
+    </section>`;
+
   let cardTemplate = `<div class="teacher-card">
     <img
       src="./styles/img/teacher-photo.png"
@@ -313,13 +313,52 @@ function insertTeacherCards(numberOfCards) {
         is all him.
       </p>
     </div>
-  </div>`
+  </div>`;
 
-  let $main = document.querySelector('main');
+  let $main = document.querySelector("main");
   $main.innerHTML += sectionTemplate;
-  let $cardContainer = document.querySelector('.teacher-cards')
+  let $cardContainer = document.querySelector(".teacher-cards");
 
-  for(let i = 0; i < numberOfCards; i++){
+  for (let i = 0; i < numberOfCards; i++) {
     $cardContainer.innerHTML += cardTemplate;
   }
+}
+
+function insertModalForm() {
+  let template = `<div class="popup">
+  <div class="col-4 p-3 bg-white shadow-lg" style="border-radius: 2rem;">
+  <form class="modal-form">
+  <svg
+          class="modal-form__close"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          fill="#000000"
+        >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+          />
+        </svg>
+      <h3 class='modal-form__title'>Book now!</h3>
+      <div class="row g-3 mb-3">
+          <div class="col-5">
+              <input type="text" class="form-control input_radius" placeholder="Ваше ім'я" name="name" id="name" required>
+          </div>
+          <div class="col-7">
+              <input type="text" class="form-control input_radius" placeholder="E-mail" name="email" id="email" required>
+          </div>
+      </div>
+      <div class="text-end mb-3">
+          <textarea style="height: 200px; resize: none;" class="form-control mb-4 p-3 input_radius" placeholder="Повідомлення" name="message" id="message" maxlength="300" required></textarea>
+          <input type="submit" class="slide__more-info-btn" value="Отправить">
+      </div>
+  </form>
+</div>
+</div>`;
+  // const scriptLink = '<script src="./showModalForm.js"></script>';
+
+  document.body.innerHTML += template;
+  // document.body.parentElement.innerHTML += scriptLink;
 }

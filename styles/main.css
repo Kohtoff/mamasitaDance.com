@@ -808,6 +808,33 @@ header {
   }
 }
 
+.popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-form__title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-form__close {
+  position: relative;
+  left: 95%;
+  cursor: pointer;
+}
+
 body {
   background-image: url(./img/bg_effects.png);
   background-attachment: fixed;
